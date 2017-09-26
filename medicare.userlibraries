@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="lib">
+    <archive path="D:/software/apache-maven-3.5.0/medicare/lib/kotlin-stdlib-jre8-sources.jar" />
+    <archive path="D:/software/apache-maven-3.5.0/medicare/lib/kotlin-test.jar" />
+    <archive path="D:/software/apache-maven-3.5.0/medicare/lib/kotlin-reflect.jar" />
+    <archive path="D:/software/apache-maven-3.5.0/medicare/lib/kotlin-stdlib-sources.jar" />
+    <archive path="D:/software/apache-maven-3.5.0/medicare/lib/kotlin-stdlib-jre7-sources.jar" />
+    <archive path="D:/software/apache-maven-3.5.0/medicare/lib/kotlin-stdlib.jar" />
+    <archive path="D:/software/apache-maven-3.5.0/medicare/lib/kotlin-stdlib-jre7.jar" />
+    <archive path="D:/software/apache-maven-3.5.0/medicare/lib/kotlin-stdlib-jre8.jar" />
+  </library>
+</eclipse-userlibraries>
+

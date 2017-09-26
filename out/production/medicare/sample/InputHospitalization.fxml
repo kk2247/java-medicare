@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="434.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.InputHospitalizationController">
+   <children>
+      <AnchorPane layoutY="7.0" prefHeight="404.0" prefWidth="610.0">
+         <children>
+            <Label layoutX="165.0" layoutY="46.0" text="入诊资料信息输入">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="119.0" layoutY="88.0" prefHeight="259.0" prefWidth="348.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="152.0" minWidth="10.0" prefWidth="152.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="190.0" minWidth="10.0" prefWidth="166.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="医疗机构信息编码" />
+                  <Label text="医疗机构名称" GridPane.rowIndex="1" />
+                  <Label text="医疗类型" GridPane.rowIndex="2" />
+                  <Label text="出院日期" GridPane.rowIndex="4" />
+                  <Label text="疾病信息" GridPane.rowIndex="3" />
+                  <TextField fx:id="hospitalID" GridPane.columnIndex="1" />
+                  <TextField fx:id="hospitalName" prefHeight="30.0" prefWidth="146.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="sickInformation" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="outDate" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <ComboBox fx:id="hospitalLevel" prefHeight="30.0" prefWidth="213.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <ComboBox fx:id="hospiatalType" prefHeight="30.0" prefWidth="196.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="医院等级" GridPane.rowIndex="5" />
+                  <Label text="入院诊断疾病名称" GridPane.rowIndex="6" />
+                  <Label text="出院原因" GridPane.rowIndex="7" />
+                  <TextField fx:id="sickName" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <ComboBox fx:id="reason" prefHeight="30.0" prefWidth="197.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+               </children>
+            </GridPane>
+            <Button fx:id="sure" layoutX="36.0" layoutY="360.0" mnemonicParsing="false" onAction="#setSure" prefHeight="30.0" prefWidth="69.0" text="录入" />
+            <Button fx:id="back" layoutX="500.0" layoutY="360.0" mnemonicParsing="false" onAction="#setBack" prefHeight="30.0" prefWidth="69.0" text="返回" />
+            <MenuBar layoutX="-5.0" layoutY="-2.0" prefHeight="32.0" prefWidth="617.0">
+               <menus>
+                  <Menu mnemonicParsing="false" text="医保服务">
+                     <items>
+                        <Menu mnemonicParsing="false" text="个人医保管理">
+                           <items>
+                              <MenuItem fx:id="addPersonInformation1" mnemonicParsing="false" onAction="#setAddPersonInformation" text="参保" />
+                              <MenuItem fx:id="deletePersonInformation1" mnemonicParsing="false" onAction="#setDeletePersonInformation" text="退保" />
+                              <MenuItem fx:id="modifyPersonInformation" mnemonicParsing="false" onAction="#setModifyPersonInformation" text="修改信息" />
+                              <MenuItem fx:id="checkPersonInformation" mnemonicParsing="false" onAction="#setCheckPersonInformation" text="查看信息" />
+                           </items>
+                        </Menu>
+                        <Menu mnemonicParsing="false" text="单位医保管理">
+                           <items>
+                              <MenuItem fx:id="addCompanyInformation1" mnemonicParsing="false" onAction="#setAddCompanyInformation" text="参保" />
+                              <MenuItem fx:id="deleteCompanyInformation" mnemonicParsing="false" onAction="#setDeleteCompanyInformation" text="退保" />
+                              <MenuItem fx:id="checkCompanyInformation" mnemonicParsing="false" onAction="#setCheckCompanyInformation" text="查看信息" />
+                              <MenuItem fx:id="modifyCompanyInformation" mnemonicParsing="false" onAction="#setModifyCompanyInformation" text="修改信息" />
+                           </items>
+                        </Menu>
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="报销服务">
+                     <items>
+                        <MenuItem fx:id="query" mnemonicParsing="false" onAction="#setQuery" text="查询信息" />
+                        <MenuItem fx:id="inputMedicalInformation" mnemonicParsing="false" onAction="#setInputMedicalInformation" text="添加医疗信息" />
+                        <MenuItem fx:id="inputRecipeInformation" mnemonicParsing="false" onAction="#setInputRecipeInformation" text="添加处方信息" />
+                        <MenuItem fx:id="caculate" mnemonicParsing="false" onAction="#setCaculate" text="计算报销" />
+                        <MenuItem fx:id="print" mnemonicParsing="false" onAction="#setPrint" text="打印信息" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="帮助">
+                     <items>
+                        <MenuItem fx:id="load" mnemonicParsing="false"  text="Action 1" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="操作">
+                     <items>
+                        <MenuItem fx:id="loginInAsPerson" mnemonicParsing="false" text="登录个人医保" />
+                        <MenuItem fx:id="loginInAsCompany" mnemonicParsing="false" text="登录单位医保" />
+                        <MenuItem fx:id="quit1" mnemonicParsing="false" onAction="#setQuit" text="退出" />
+                        <MenuItem fx:id="backToIndex5" mnemonicParsing="false" onAction="#setBackToIndex5" text="返回首页" />
+                     </items>
+                  </Menu>
+               </menus>
+            </MenuBar>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

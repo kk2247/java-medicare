@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="295.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CaculateController">
+   <children>
+      <Label layoutX="104.0" layoutY="54.0" text="本次共消费" />
+      <Label layoutX="97.0" layoutY="103.0" text="医保提供报销" />
+      <Label layoutX="264.0" layoutY="54.0" text="元" />
+      <Label layoutX="264.0" layoutY="103.0" text="元" />
+      <Label fx:id="cost" layoutX="207.0" layoutY="54.0" text="           " />
+      <Label fx:id="reimbrusement" layoutX="207.0" layoutY="103.0" text="          " />
+      <Button fx:id="back" layoutX="195.0" layoutY="230.0" mnemonicParsing="false" onAction="#caculate" prefHeight="30.0" prefWidth="75.0" text="返回" />
+   </children>
+</AnchorPane>

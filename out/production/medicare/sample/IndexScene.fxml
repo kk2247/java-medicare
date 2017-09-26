@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="409.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.IndexSceneController">
+   <children>
+      <MenuBar layoutY="-2.0" prefHeight="44.0" prefWidth="573.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="医保服务">
+            <items>
+                  <Menu mnemonicParsing="false" text="个人医保管理">
+                    <items>
+                      <MenuItem fx:id="addPersonInformation" mnemonicParsing="false" onAction="#setAddPersonInformation" text="参保" />
+                        <MenuItem fx:id="deletePersonInformation" mnemonicParsing="false" onAction="#setDeletePersonInformation" text="退保" />
+                        <MenuItem fx:id="modifyPersonInformation" mnemonicParsing="false" onAction="#setModifyPersonInformation" text="修改信息" />
+                        <MenuItem fx:id="checkPersonInformation" mnemonicParsing="false" onAction="#setCheckPersonInformation" text="查看信息" />
+                    </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="单位医保管理">
+                    <items>
+                      <MenuItem fx:id="addCompanyInformation" mnemonicParsing="false" onAction="#setAddCompanyInformation" text="参保" />
+                        <MenuItem fx:id="deleteCompanyInformation" mnemonicParsing="false" onAction="#setDeleteCompanyInformation" text="退保" />
+                        <MenuItem fx:id="checkCompanyInformation" mnemonicParsing="false" onAction="#setCheckCompanyInformation" text="查看信息" />
+                        <MenuItem fx:id="modifyCompanyInformation" mnemonicParsing="false" onAction="#setModifyCompanyInformation" text="修改信息" />
+                    </items>
+                  </Menu>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="报销服务">
+            <items>
+              <MenuItem fx:id="query" mnemonicParsing="false" onAction="#setQuery" text="查询信息" />
+                  <MenuItem fx:id="inputMedicalInformation" mnemonicParsing="false" onAction="#setInputMedicalInformation" text="添加医疗信息" />
+                  <MenuItem fx:id="inputRecipeInformation" mnemonicParsing="false" onAction="#setInputRecipeInformation" text="添加处方信息" />
+                  <MenuItem fx:id="caculate" mnemonicParsing="false" onAction="#setCaculate" text="计算报销" />
+                  <MenuItem fx:id="print" mnemonicParsing="false" onAction="#setPrint" text="打印信息" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="帮助">
+              <items>
+                <MenuItem fx:id="load" mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="操作">
+               <items>
+                  <MenuItem fx:id="loginInAsPerson" mnemonicParsing="false" onAction="#setLoginInAsPerson" onMenuValidation="#setLoginInAsPerson" text="登录个人医保" />
+                  <MenuItem fx:id="loginInAsCompany" mnemonicParsing="false" onAction="#setLoginInAsCompany" text="登录单位医保" />
+                  <MenuItem fx:id="quit" mnemonicParsing="false" onAction="#setQuit" text="退出" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <AnchorPane layoutX="63.0" layoutY="30.0" prefHeight="385.0" prefWidth="510.0">
+         <children>
+            <ImageView fitHeight="369.0" fitWidth="567.0" layoutX="-62.0" layoutY="14.0">
+               <image>
+                  <Image url="@../picture/d78f0865eaf26551080c38c4320690c7.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="52.0" layoutY="32.0" styleClass="-" text="欢迎进入医保管理系统">
+               <font>
+                  <Font size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

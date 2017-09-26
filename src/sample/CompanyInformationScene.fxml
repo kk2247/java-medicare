@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane onKeyPressed="#setLoad"  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.CompanyInformationSceneController">
+   <children>
+      <AnchorPane fx:id="information" layoutY="33.0" onDragDetected="#setLoad" onDragDone="#setLoad" onDragEntered="#setLoad" onDragExited="#setLoad" onKeyPressed="#setLoad" onKeyReleased="#setLoad" onMouseClicked="#setLoad" onMouseDragEntered="#setLoad" onMouseDragReleased="#setLoad" prefHeight="367.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label fx:id="getInformation" layoutX="80.0" layoutY="98.0" prefHeight="239.0" prefWidth="441.0" text="         " />
+            <Label layoutX="204.0" layoutY="44.0" text="单位信息显示">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Button fx:id="backToIndex2" layoutX="495.0" layoutY="346.0" mnemonicParsing="false" onAction="#setBackToIndex2" prefHeight="30.0" prefWidth="63.0" text="返回" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="loginIn" layoutY="35.0" onMouseClicked="#setLoad" prefHeight="365.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label layoutX="144.0" layoutY="52.0" text="单位信息查询界面">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Label layoutX="112.0" layoutY="117.0" text="单位名称" />
+            <Label layoutX="112.0" layoutY="157.0" text="单位编号" />
+            <TextField fx:id="name" layoutX="180.0" layoutY="112.0" />
+            <TextField fx:id="Id" layoutX="180.0" layoutY="152.0" />
+            <Label fx:id="warn" layoutX="91.0" layoutY="193.0" prefHeight="52.0" prefWidth="328.0" text="请输入ID或姓名" />
+            <Button fx:id="clear" layoutX="413.0" layoutY="127.0" mnemonicParsing="false" onAction="#setClear" text="清空" />
+            <Button fx:id="loginInButton" layoutX="209.0" layoutY="258.0" mnemonicParsing="false" onAction="#transToQuery" prefHeight="42.0" prefWidth="126.0" text="查询" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="list" layoutY="35.0" onMouseClicked="#setLoad" prefHeight="365.0" prefWidth="600.0" visible="false">
+         <children>
+            <Label layoutX="203.0" layoutY="44.0" text="搜索所得信息">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="65.0" layoutY="96.0" prefHeight="239.0" prefWidth="467.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="381.0" minWidth="10.0" prefWidth="381.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="125.0" minWidth="0.0" prefWidth="0.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label fx:id="display2" text="          " GridPane.rowIndex="1" />
+                  <Label fx:id="display3" text="          " GridPane.rowIndex="2" />
+                  <Label fx:id="display4" text="          " GridPane.rowIndex="3" />
+                  <Label fx:id="display6" text="              " GridPane.rowIndex="5" />
+                  <Label fx:id="display5" text="         " GridPane.rowIndex="4" />
+                  <Button fx:id="check1" mnemonicParsing="false" onAction="#choose1" text="查看" GridPane.columnIndex="1" />
+                  <Button fx:id="check2" mnemonicParsing="false" onAction="#choose2" text="查看" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Button fx:id="check3" mnemonicParsing="false" onAction="#choose3" text="查看" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Button fx:id="check4" mnemonicParsing="false" onAction="#choose4" text="查看" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="check5" mnemonicParsing="false" onAction="#choose5" text="查看" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Button fx:id="check6" mnemonicParsing="false" onAction="#choose6" text="查看" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label fx:id="display1" text="       " />
+               </children>
+            </GridPane>
+            <Button fx:id="getBackToQuery2" layoutX="498.0" layoutY="356.0" mnemonicParsing="false" onAction="#goBackToQuery2" text="返回" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="modifyPane" layoutY="24.0" prefHeight="376.0" prefWidth="600.0" visible="false">
+         <children>
+            <Button fx:id="submit" layoutX="22.0" layoutY="318.0" mnemonicParsing="false" onAction="#comfireToModify" prefHeight="42.0" prefWidth="92.0" text="确认修改" />
+            <Button fx:id="goBackToMenu" layoutX="487.0" layoutY="318.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="92.0" text="返回" />
+            <Label layoutX="204.0" layoutY="30.0" text="数据修改界面">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <GridPane layoutX="133.0" layoutY="72.0" prefHeight="267.0" prefWidth="354.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="172.0" minWidth="10.0" prefWidth="97.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.0" minWidth="10.0" prefWidth="257.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Label text="单位名称" />
+                  <Label text="单位编号" GridPane.rowIndex="1" />
+                  <Label text="电话号码" GridPane.rowIndex="2" />
+                  <Label text="单位地址" GridPane.rowIndex="3" />
+                  <Label text="邮政编码" GridPane.rowIndex="4" />
+                  <Label text="单位类型" GridPane.rowIndex="5" />
+                  <TextField fx:id="companyName" GridPane.columnIndex="1" />
+                  <TextField fx:id="companyID" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="phoneNumber" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <TextField fx:id="companyLocation" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextField fx:id="companyPostcode" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <ComboBox fx:id="companyTye" prefHeight="30.0" prefWidth="258.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="comfirmToQuit" layoutY="35.0" onZoom="#setLoad" onZoomStarted="#setLoad" prefHeight="365.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="156.0" layoutY="61.0" text="是否确认退保？？？">
+               <font>
+                  <Font size="32.0" />
+               </font>
+            </Label>
+            <Button fx:id="sure" layoutX="53.0" layoutY="311.0" mnemonicParsing="false" onAction="#sureToQuit" prefHeight="42.0" prefWidth="92.0" text="确认" />
+            <Button fx:id="backToIndex3" layoutX="460.0" layoutY="311.0" mnemonicParsing="false" onAction="#setBackToIndex3" prefHeight="42.0" prefWidth="92.0" text="返回" />
+         </children>
+      </AnchorPane>
+      <MenuBar prefHeight="32.0" prefWidth="600.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="医保服务">
+               <items>
+                  <Menu mnemonicParsing="false" text="个人医保管理">
+                     <items>
+                        <MenuItem fx:id="addPersonInformation1" mnemonicParsing="false" onAction="#setAddPersonInformation" text="参保" />
+                        <MenuItem fx:id="deletePersonInformation1" mnemonicParsing="false" onAction="#setDeletePersonInformation" text="退保" />
+                        <MenuItem fx:id="modifyPersonInformation" mnemonicParsing="false" onAction="#setModifyPersonInformation" text="修改信息" />
+                        <MenuItem fx:id="checkPersonInformation" mnemonicParsing="false" onAction="#setCheckPersonInformation" text="查看信息" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="单位医保管理">
+                     <items>
+                        <MenuItem fx:id="addCompanyInformation1" mnemonicParsing="false" onAction="#setAddCompanyInformation" text="参保" />
+                        <MenuItem fx:id="deleteCompanyInformation" mnemonicParsing="false" onAction="#setDeleteCompanyInformation" text="退保" />
+                        <MenuItem fx:id="checkCompanyInformation" mnemonicParsing="false" onAction="#setCheckCompanyInformation" text="查看信息" />
+                        <MenuItem fx:id="modifyCompanyInformation" mnemonicParsing="false" onAction="#setModifyCompanyInformation" text="修改信息" />
+                     </items>
+                  </Menu>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="报销服务">
+               <items>
+                  <MenuItem fx:id="query" mnemonicParsing="false" onAction="#setQuery" text="查询信息" />
+                  <MenuItem fx:id="inputMedicalInformation" mnemonicParsing="false" onAction="#setInputMedicalInformation" text="添加医疗信息" />
+                  <MenuItem fx:id="inputRecipeInformation" mnemonicParsing="false" onAction="#setInputRecipeInformation" text="添加处方信息" />
+                  <MenuItem fx:id="caculate" mnemonicParsing="false" onAction="#setCaculate" text="计算报销" />
+                  <MenuItem fx:id="print" mnemonicParsing="false" onAction="#setPrint" text="打印信息" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="帮助">
+               <items>
+                  <MenuItem fx:id="load" mnemonicParsing="false" onAction="#setLoad" text="Action 1" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="操作">
+               <items>
+                  <MenuItem fx:id="loginInAsPerson" mnemonicParsing="false" text="登录个人医保" />
+                  <MenuItem fx:id="loginInAsCompany" mnemonicParsing="false" text="登录单位医保" />
+                  <MenuItem fx:id="quit1" mnemonicParsing="false" onAction="#setQuit" text="退出" />
+                  <MenuItem fx:id="backToIndex5" mnemonicParsing="false" onAction="#setBackToIndex5" text="返回首页" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
